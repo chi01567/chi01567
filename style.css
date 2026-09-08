@@ -1,0 +1,343 @@
+/* 全局變數與基礎設定 */
+:root {
+    --primary-color: #2b5876;
+    --accent-color: #4e4376;
+    --highlight-color: #f39c12;
+    --text-dark: #2c3e50;
+    --text-muted: #666666;
+    --bg-light: #f8f9fa;
+    --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    --card-hover-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--text-dark);
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+/* 導覽列 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 8%;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--text-dark);
+    margin-left: 2rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero 主展示區 */
+.hero {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    color: #ffffff;
+    padding: 3rem 20px;
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem auto;
+    border: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.avatar-placeholder {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.hero .highlight {
+    color: #f1c40f;
+}
+
+.hero .subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 1rem;
+}
+
+.hero .bio {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    font-weight: 300;
+    opacity: 0.85;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #f1c40f;
+    color: #2c3e50;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 700;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background-color: #f39c12;
+}
+
+/* 區塊通用的基本排版 */
+.section {
+    padding: 5rem 8%;
+    text-align: center;
+}
+
+.bg-light {
+    background-color: var(--bg-light);
+}
+
+.section-header {
+    margin-bottom: 2.5rem;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.section-header p {
+    color: var(--text-muted);
+}
+
+/* 篩選按鈕區塊 */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 3rem;
+}
+
+.filter-btn {
+    padding: 8px 20px;
+    border: 1.5px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background: var(--primary-color);
+    color: #ffffff;
+}
+
+/* 專案卡片網格 */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.project-banner {
+    height: 160px;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.project-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-tag {
+    align-self: flex-start;
+    font-size: 0.75rem;
+    background-color: #e8f4f8;
+    color: var(--primary-color);
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+.project-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.project-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.project-tech {
+    font-size: 0.8rem;
+    color: #888888;
+    margin-bottom: 1rem;
+}
+
+.project-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-right: 15px;
+    transition: opacity 0.2s;
+}
+
+.project-links a:hover {
+    opacity: 0.7;
+}
+
+/* 技能區塊 */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skill-card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    text-align: left;
+}
+
+.skill-card h3 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+}
+
+.skill-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+/* 頁尾 */
+footer {
+    background-color: #1e293b;
+    color: #ffffff;
+    padding: 3rem 8%;
+    text-align: center;
+}
+
+footer h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+footer p {
+    opacity: 0.8;
+    font-size: 0.95rem;
+}
+
+.social-links {
+    margin: 1.5rem 0;
+}
+
+.social-links a {
+    color: #f1c40f;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.social-links a:hover {
+    opacity: 0.8;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    opacity: 0.5;
+    margin-top: 1.5rem;
+}
+
+/* 響應式微調 */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .nav-links li a {
+        margin: 0 10px;
+    }
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+}

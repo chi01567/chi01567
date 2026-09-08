@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人作品集 | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- 導覽列 -->
+    <nav class="navbar">
+        <div class="logo">YOUR BRAND.</div>
+        <ul class="nav-links">
+            <li><a href="#about">關於我</a></li>
+            <li><a href="#projects">專案成果</a></li>
+            <li><a href="#skills">核心技能</a></li>
+            <li><a href="#contact">聯絡方式</a></li>
+        </ul>
+    </nav>
+
+    <!-- 個人 Hero 區塊 -->
+    <header id="about" class="hero">
+        <div class="hero-content">
+            <div class="profile-avatar">
+                <span class="avatar-placeholder">IP</span>
+            </div>
+            <h1>你好，我是 <span class="highlight">[你的名字]</span></h1>
+            <p class="subtitle">大學四年專案作品集 & 個人 IP 頁面</p>
+            <p class="bio">這裡記錄了我大學四年在課堂、競賽與自主學習中的專案作品與成果演進。</p>
+            <a href="#projects" class="btn">瀏覽專案成果</a>
+        </div>
+    </header>
+
+    <!-- 專案展示區塊 -->
+    <section id="projects" class="section">
+        <div class="section-header">
+            <h2>專案成果 (Projects)</h2>
+            <p>包含大一至大四的課程作業、競賽專案與畢業專題</p>
+        </div>
+
+        <!-- 分類過濾按鈕 -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">全部作品</button>
+            <button class="filter-btn" data-filter="freshman">大一</button>
+            <button class="filter-btn" data-filter="sophomore">大二</button>
+            <button class="filter-btn" data-filter="junior">大三</button>
+            <button class="filter-btn" data-filter="senior">大四 / 畢專</button>
+        </div>
+
+        <!-- 專案卡片容器 (由 JavaScript 動態生成) -->
+        <div class="projects-grid" id="projects-container">
+            <!-- JS 自動載入內容 -->
+        </div>
+    </section>
+
+    <!-- 核心技能區塊 -->
+    <section id="skills" class="section bg-light">
+        <div class="section-header">
+            <h2>核心技能 (Skills)</h2>
+            <p>大學四年累積的專業能力與工具應用</p>
+        </div>
+        <div class="skills-container">
+            <div class="skill-card">
+                <h3>程式語言與前端</h3>
+                <p>HTML5, CSS3, JavaScript (ES6+), Git, GitHub</p>
+            </div>
+            <div class="skill-card">
+                <h3>軟體與設計工具</h3>
+                <p>Figma, VS Code, Canva, Notion</p>
+            </div>
+            <div class="skill-card">
+                <h3>軟實力與經驗</h3>
+                <p>專案管理、團隊合作、跨領域溝通、簡報表達</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁尾 / 聯絡資訊 -->
+    <footer id="contact">
+        <h2>聯絡方式 (Contact)</h2>
+        <p>歡迎透過以下方式聯繫與交流！</p>
+        <div class="social-links">
+            <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+            <a href="mailto:your-email@example.com">Email</a>
+            <a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <p class="copyright">&copy; 2026 Your Name. Built with HTML, CSS & JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
