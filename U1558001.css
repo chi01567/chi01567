@@ -1,0 +1,122 @@
+/* STREAMING_CHUNK:Defining CSS variables and global layout styles... */
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #3498db;
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --hover-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.page-header h1 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* STREAMING_CHUNK:Styling Responsive Gallery Grid... */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* 卡片與連結設置 */
+.image-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-card:hover {
+    box-shadow: var(--hover-shadow);
+}
+
+.img-wrapper {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: #e0e0e0;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* STREAMING_CHUNK:Configuring keyframe shake animation on hover... */
+/* 當滑鼠移到卡片時觸發圖片晃動效果 */
+.image-card:hover .img-wrapper img {
+    animation: shakeAnimation 0.5s ease-in-out infinite;
+}
+
+/* 圖片晃動 Keyframe 動畫定義 */
+@keyframes shakeAnimation {
+    0% { transform: rotate(0deg) scale(1.05); }
+    20% { transform: rotate(-3deg) scale(1.05); }
+    40% { transform: rotate(3deg) scale(1.05); }
+    60% { transform: rotate(-2deg) scale(1.05); }
+    80% { transform: rotate(2deg) scale(1.05); }
+    100% { transform: rotate(0deg) scale(1.05); }
+}
+
+.card-info {
+    padding: 1rem;
+    text-align: center;
+}
+
+.card-info h3 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 0.3rem;
+}
+
+.card-info p {
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+.page-footer {
+    margin-top: auto;
+    padding-top: 3rem;
+    color: #888;
+    font-size: 0.85rem;
+}
