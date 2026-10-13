@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYBER-HYDRATE // 頂級潮流水壺專賣店</title>
+    <!-- 引入獨立的 CSS 樣式表 -->
+    <link rel="stylesheet" href="style.css">
+    <!-- 引入 Google Fonts 潮流字體 -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- 引入 FontAwesome 圖示 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- 煙火特效專用 Canvas -->
+    <canvas id="fireworks-canvas"></canvas>
+
+    <!-- 頁首導覽列 -->
+    <header class="header">
+        <div class="logo">
+            <i class="fa-solid fa-bolt-lightning"></i> CYBER<span>HYDRATE</span>
+        </div>
+        <div class="nav-actions">
+            <button class="cart-btn" id="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i> 購物車
+                <span class="cart-badge" id="cart-badge">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- 英雄橫幅區 -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>FUTURE HYDRATION STRIKE</h1>
+            <p>解鎖次世代頂級保溫瓶與水壺，為你的賽博生活注入極限能量！</p>
+        </div>
+    </section>
+
+    <!-- 商品展示區 -->
+    <main class="container">
+        <h2 class="section-title">熱門精選商品</h2>
+        <div class="products-grid" id="products-grid">
+            <!-- JavaScript 動態載入 6 款商品 -->
+        </div>
+    </main>
+
+    <!-- 購物車側邊滑動面板 -->
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3><i class="fa-solid fa-bag-shopping"></i> 你的賽博購物車</h3>
+            <button class="close-cart" id="close-cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- 購物車清單動態載入 -->
+            <div class="empty-cart-msg">購物車目前空空如也...快去加入極限裝備！</div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>總計：</span>
+                <span id="cart-total-price">NT$ 0</span>
+            </div>
+            <button class="checkout-btn" id="checkout-btn">立即結帳</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <!-- 引入獨立的 JavaScript 邏輯檔 -->
+    <script src="script.js"></script>
+</body>
+</html>
